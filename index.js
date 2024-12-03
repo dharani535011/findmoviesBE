@@ -10,9 +10,10 @@ const UserRouter = require("./Routers/Userrouter")
 app.use(express.json())
 app.use(cookieparser())
 app.use(cors({
-    origin:"*",
+    origin:['http://localhost:5173',"https://find-movies-task.netlify.app"],
     credentials:true
 }))
+app.options('*', cors())
 
 // ROUTERS
 app.use("/users",UserRouter)
