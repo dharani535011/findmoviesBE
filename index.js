@@ -10,7 +10,7 @@ const UserRouter = require("./Routers/Userrouter")
 app.use(express.json())
 app.use(cookieparser())
 app.use(cors({
-    origin:true,
+    origin:"*",
     credentials:true
 }))
 
